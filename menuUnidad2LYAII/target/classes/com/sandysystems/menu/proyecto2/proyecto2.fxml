@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.sandysystems.menu.proyecto2.Proyecto2Controller"
+      spacing="15" style="-fx-background-color: linear-gradient(to right, #6c63ff, #48c6ef);"
+      prefWidth="800" prefHeight="600">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Escribe una expresión (ejemplo: a = b + c * d):" />
+
+    <TextField fx:id="txtExpresion"
+               promptText="Ejemplo: a = b + c * d"
+               style="-fx-background-color: #f9f9f9; -fx-border-color: #6c63ff; -fx-border-radius: 8; -fx-background-radius: 8;" />
+
+    <Button text="Generar Cuádruplos" onAction="#generar"
+            style="-fx-background-color: #6c63ff; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12;" />
+
+    <TableView fx:id="tabla" prefHeight="400"
+               style="-fx-background-color: #ffffff; -fx-border-color: #6c63ff; -fx-border-radius: 12;">
+        <columns>
+            <TableColumn fx:id="colOp" text="Operador" prefWidth="120"/>
+            <TableColumn fx:id="colArg1" text="Arg1" prefWidth="120"/>
+            <TableColumn fx:id="colArg2" text="Arg2" prefWidth="120"/>
+            <TableColumn fx:id="colRes" text="Resultado" prefWidth="140"/>
+        </columns>
+    </TableView>
+
+</VBox>
